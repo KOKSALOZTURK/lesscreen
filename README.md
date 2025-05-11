@@ -45,7 +45,7 @@ Folder Structure (if cloned locally):
 How to Run Locally:
 ====================
 1. Clone the repository:
-   git clone https://github.com/yourusername/lesscreen.git
+   git clone git@github.com:KOKSALOZTURK/lesscreen.git
 
 2. Navigate into the project folder:
    cd lesscreen
