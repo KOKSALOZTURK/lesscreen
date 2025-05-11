@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesscreen | Protecting Early Childhood Development</title>
+    <style>
+        /* Modern, parent-friendly styling */
+        :root {
+            --primary: #4a6fa5;  /* Calm blue */
+            --secondary: #ff9a76; /* Warm orange */
+            --dark: #333;
+            --light: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--dark);
+            padding: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: var(--light);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .hero h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background-color: white;
+        }
+        .stat-card {
+            width: 200px;
+            margin: 1rem;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .visual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+        }
+        .visual-placeholder {
+            background-color: #eee;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
+            text-decoration: none;
+            display: inline-block;
+        }
+        @media (max-width: 768px) {
+            .visual-section {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lesscreen</h1>
+        <p>Helping parents raise screen-smart kids from birth to age 6</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">The Science</a></li>
+            <li><a href="alternatives.html">Screen-Free Activities</a></li>
+            <li><a href="stories.html">Parent Stories</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Your baby's brain develops fastest in the first 6 years</h1>
+        <p>And screens are rewiring it in ways science is just beginning to understand.</p>
+        <a href="research.html" class="cta-button">Learn Why It Matters</a>
+        
+        <!-- Visual Placeholder 1 - Hero Image -->
+        <div class="visual-placeholder">
+            [Hero Image: Side-by-side comparison of baby engaged with parent vs. baby staring at screen]
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <h3>90%</h3>
+            <p>of brain development happens before age 5</p>
+        </div>
+        <div class="stat-card">
+            <h3>2x</h3>
+            <p>higher risk of speech delays with early screen exposure</p>
+        </div>
+        <div class="stat-card">
+            <h3>40%</h3>
+            <p>of toddlers use devices daily (AAP, 2023)</p>
+        </div>
+    </section>
+
+    <section class="visual-section">
+        <div>
+            <h2>What screens replace matters most</h2>
+            <p>Every minute spent with screens is a minute not spent:</p>
+            <ul>
+                <li>Building language through conversation</li>
+                <li>Developing motor skills through play</li>
+                <li>Learning emotional regulation</li>
+            </ul>
+            <a href="alternatives.html" class="cta-button">Discover Better Alternatives</a>
+        </div>
+        
+        <!-- Visual Placeholder 2 -->
+        <div class="visual-placeholder">
+            [Infographic: Comparison of screen time vs. interactive play benefits]
+        </div>
+    </section>
+
+    <section class="visual-section">
+        <!-- Visual Placeholder 3 -->
+        <div class="visual-placeholder">
+            [Photo: Happy toddler playing with blocks]
+        </div>
+        
+        <div>
+            <h2>It's not about elimination, but healthy habits</h2>
+            <p>We help parents create realistic screen-time plans based on developmental stages:</p>
+            <ul>
+                <li>0-2 years: Why zero screens is ideal</li>
+                <li>2-4 years: Introducing minimal quality content</li>
+                <li>4-6 years: Setting sustainable limits</li>
+            </ul>
+            <a href="resources.html" class="cta-button">Get Age-Specific Guides</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Lesscreen | Evidence-based parenting for the digital age</p>
+        <p><a href="privacy.html" style="color: white;">Privacy Policy</a> | <a href="contact.html" style="color: white;">Contact Us</a></p>
+    </footer>
+</body>
+</html>

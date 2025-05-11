@@ -1,0 +1,419 @@
+/* Common styles used across all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+:root {
+    --primary: #5d687a;  /* Calm blue */
+    --secondary: hsl(50, 94%, 47%); /* Warm orange */
+    --dark: #333;
+    --light: #f8f9fa;
+    --white: #fff;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+}
+
+/* Header Design */
+header {
+    opacity: 10;    
+    position: fixed;
+    width: 100%;
+    top: 8px;
+    left: 0;
+    z-index: 999;
+    transition: top 0.8s ease-in-out;
+}
+
+#navbar {
+    background-color: var(--light);
+    position: sticky;
+    top: 0.5rem;
+    width: 90%; 
+    margin: auto; 
+    height: 60px; 
+    z-index: 1000;
+    border: 1px solid var(--primary);
+    border-radius: 30px; 
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text h1, .logo-text h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+.logo-text h2 {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-shadow: #000000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger i {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links > a, 
+.nav-links > .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover, .dropbtn:hover, .contact-icon:hover {
+    color: var(--primary);
+}
+
+.nav-links.active {
+    display: block;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-10px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease;
+    display: block;
+    position: absolute;
+    background-color: var(--white);
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 250px;
+    z-index: 1000;
+    text-align: left;
+    padding: 0.5rem 0;
+}
+
+.dropbtn {
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    #nav-links.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .nav-links > a,
+    .nav-links > .dropdown,
+    .search-section,
+    .contact-icon {
+        width: 100%;
+        text-align: left;
+        padding: 1px 0;
+        display: block;
+    }
+
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #navbar {
+        width: 95%;
+        height: auto;
+        min-height: 60px;
+        padding: 0.5rem;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #backToTop img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: transparent;
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--primary);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--secondary);
+}
+
+#backToTop img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(12%) saturate(1234%) hue-rotate(182deg) brightness(92%) contrast(86%);
+}
+
+#backToTop:hover img {
+    transform: translateY(-2px);
+    filter: brightness(0) saturate(100%) invert(67%) sepia(61%) saturate(638%) hue-rotate(358deg) brightness(103%) contrast(107%);
+}
+
+/* Common Button Styles */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #ffd700; /* Brighter orange */
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.button:hover {
+    background-color: #ffd700; /* Brighter orange */
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.secondary-button:hover {
+    background-color: #ffd700; /* Brighter orange */
+    color: var(--dark);
+    transform: translateY(-2px);
+} 
